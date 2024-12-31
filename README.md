@@ -21,7 +21,22 @@ In a way, this achieves the goals of liquidity optimization, risk management, go
 
 ## Architecture
 A system crew of agents for responsible for different tasks, built using LangChain(a composable framework for building LLMs).
+There is a supervisor module responsible for managing the agents and their interactions. The agents are responsible for different tasks such as:
+- Communication
+- Personalization
+- Sentiment Analysis
+- Risk Analysis
+- Making API calls
 
+We decided to go with a RAG architecture because of the benefit as described by the OpenAI cookbook. It says that when you fine-tune a model, it's like studying for an exam one week away.When you insert knowledge into the prompt via retrieval, it's like taking an exam with open notes.
+
+The RAG database is populated with with information scraped from pages providing relevant information on trading platforms. 
+
+We chose Gemini 1.0 as our LLM model because it is capable of reasoning and has sufficient context window. Just enough such that it is not too expensive to run and not too small to be useful.
+Our RAG model is agentic RAG, where agents are able to loop and evaluate themselves if the answers are satisfactory.
+Additionally, each agent is able to search the web for information if they don't already have enough information available to them. This is made possible with the Tavily tools binded to the agents.
+
+We hope that with our app, users will have one click access to all the information they need to make informed decisions. All within the convenience of a chat interface.
 
 ## Limitations
 1. not holding token on mainnet so cannot use faucet...(for Hyperliquid, requires token from Arbitrum Sepolia, and THENA)
@@ -31,6 +46,7 @@ A system crew of agents for responsible for different tasks, built using LangCha
 We have identified areas for further R&D.
 The next steps in our roadmap are to:
 - Data collection and tuning via LangSmith and human feedback
+- Implementation of long term memory for cross session usage
 
 still researching on the following:
 - https://xrpl.org/docs
