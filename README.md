@@ -28,6 +28,8 @@ There is a supervisor module responsible for managing the agents and their inter
 - Risk Analysis
 - Making API calls
 
+Too many options and too much uncertainty can lead to decision paralysis. Especially for uninformed traders, the amount of information available can be overwhelming. Don't you wish there was someone to guide you along?
+
 We decided to go with a RAG architecture because of the benefit as described by the OpenAI cookbook. It says that when you fine-tune a model, it's like studying for an exam one week away.When you insert knowledge into the prompt via retrieval, it's like taking an exam with open notes.
 
 The RAG database is populated with with information scraped from pages providing relevant information on trading platforms. 
