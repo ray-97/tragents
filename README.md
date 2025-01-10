@@ -14,6 +14,8 @@ Our project aims to enhance user experience according to their profile(risk appe
 
 In a way, this achieves the goals of liquidity optimization, risk management, governance decision support, sentiment & market analysis and user experience enhancement. 
 
+See more here: https://www.youtube.com/watch?v=se49l2aXVGA
+
 ## Introduction
 Too many options and too much uncertainty can lead to decision paralysis. Especially for uninformed traders, the amount of information available can be overwhelming. Don't you wish there was someone to guide you along?
 
